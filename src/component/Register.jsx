@@ -19,7 +19,7 @@ export default function Register() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:8080/api/auth/register", { email, password });
+      const res = await axios.post("https://librarymanagementbackend-j2qd.onrender.com/api/auth/register", { email, password });
 
       if (res && res.data && res.data.success) {
         localStorage.setItem("isLoggedIn", true);

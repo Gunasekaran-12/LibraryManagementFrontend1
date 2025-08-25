@@ -19,7 +19,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:8080/api/auth/login", { email, password });
+      const res = await axios.post("https://librarymanagementbackend-j2qd.onrender.com/api/auth/login", { email, password });
 
       if (res?.data?.success) {
         localStorage.setItem("isLoggedIn", "true");
