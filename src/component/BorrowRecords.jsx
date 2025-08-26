@@ -5,7 +5,7 @@ export default function BorrowRecords() {
   const [records, setRecords] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/borrow-records")
+    axios.get("https://librarymanagementbackend-j2qd.onrender.com/api/auth/borrow-records")
       .then(res => setRecords(res.data))
       .catch(err => console.error(err));
   }, []);

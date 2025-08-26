@@ -12,7 +12,7 @@ export default function IssueBook() {
     setSuccess(""); 
     setError("");
     try {
-      const res = await axios.post("http://localhost:5000/issue-book", { bookId, borrowerId });
+      const res = await axios.post("https://librarymanagementbackend-j2qd.onrender.com/api/auth/issue-book", { bookId, borrowerId });
       if (res.data.success) {
         setSuccess("Book issued successfully!");
         setBookId("");
