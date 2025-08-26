@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "../axiosConfig";
+
 import { Eye, EyeOff, Mail, Lock, User, Sparkles, Shield, ArrowRight } from "lucide-react";
 
 export default function Register() {
@@ -19,7 +20,7 @@ export default function Register() {
     setLoading(true);
 
     try {
-      const res = await axios.post("https://librarymanagementbackend-j2qd.onrender.com/api/auth/register", { email, password });
+          const res = await axios.post("/auth/register", { email, password });
 
       if (res && res.data && res.data.success) {
         localStorage.setItem("isLoggedIn", true);
