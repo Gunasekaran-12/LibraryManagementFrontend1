@@ -20,7 +20,7 @@ export default function Register() {
     setLoading(true);
 
     try {
-          const res = await axios.post("/auth/register", { email, password });
+          const res = await axios.post("https://librarymanagementbackend-1.onrender.com/api/auth/register", { email, password });
 
       if (res && res.data && res.data.success) {
         localStorage.setItem("isLoggedIn", true);
