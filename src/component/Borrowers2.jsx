@@ -5,7 +5,7 @@ export default function Borrowers() {
   const [borrowers, setBorrowers] = useState([]);
 
   useEffect(() => {
-    axios.get("https://librarymanagementbackend-j2qd.onrender.com/borrowers")
+    axios.get("https://librarymanagementbackend-1.onrender.com/borrowers")
       .then(res => setBorrowers(res.data))
       .catch(err => console.error(err));
   }, []);

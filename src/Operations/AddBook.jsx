@@ -9,7 +9,7 @@ export default function AddBook() {
   const handleAddBook = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://librarymanagementbackend-j2qd.onrender.com/api/auth/books", { title, author });
+      const res = await axios.post("https://librarymanagementbackend-1.onrender.com/api/auth/books", { title, author });
       if (res.data.success) setSuccess("Book added successfully!");
     } catch (err) {
       console.error(err);

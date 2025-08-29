@@ -12,7 +12,7 @@ export default function AddBorrower() {
     setSuccess(""); 
     setError("");
     try {
-      const res = await axios.post("https://librarymanagementbackend-j2qd.onrender.com/api/auth/borrowers", { name, email });
+      const res = await axios.post("https://librarymanagementbackend-1.onrender.com/api/auth/borrowers", { name, email });
       if (res.data.success) {
         setSuccess("Borrower added successfully!");
         setName("");

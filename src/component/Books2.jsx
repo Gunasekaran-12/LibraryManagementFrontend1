@@ -7,7 +7,7 @@ export default function Books2() {  // <-- default export
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    axios.get("https://librarymanagementbackend-j2qd.onrender.com/api/auth/books")
+    axios.get("https://librarymanagementbackend-1.onrender.com/api/auth/books")
       .then(res => setBooks(res.data))
       .catch(err => console.error(err));
   }, []);
